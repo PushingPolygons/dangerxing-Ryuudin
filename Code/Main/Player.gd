@@ -13,6 +13,9 @@ var threshold = 20
 var swipeDir = 0
 var swipeDone = false
 
+var moveLeftExecuted = false
+var moveRightExecuted = false
+
 const JUMP_VEL = 7
 var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
 
@@ -35,7 +38,25 @@ func _process(delta):
 			position.z = positions[curPos]
 		swipeDone = true
 		swipeDir = 0  # Reset swipeDir after the action
-			
+
+	if moveLeftExecuted:
+		if curPos > 0:
+			curPos -= 1
+			position.z = positions[curPos]
+			moveLeftExecuted = false
+
+	if moveRightExecuted:
+		if curPos < positions.size() - 1:
+			curPos += 1
+			position.z = positions[curPos]
+			moveRightExecuted = false
+
+	if Input.is_action_just_pressed("move_left"):
+		moveLeftExecuted = true
+
+	if Input.is_action_just_pressed("move_right"):
+		moveRightExecuted = true
+
 	if death_sensor.is_colliding():
 		death()
 
