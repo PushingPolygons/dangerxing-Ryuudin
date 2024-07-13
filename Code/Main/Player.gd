@@ -44,10 +44,12 @@ func swipe():
 
 
 	if Input.is_action_just_pressed("press"):
+		if !swiping:
 			swiping = true
 			startSwipe = get_viewport().get_mouse_position()
 			print("Start Positon: ", startSwipe)
 	if Input.is_action_just_pressed("press"):
+		if swiping:
 			curSwipe = get_viewport().get_mouse_position()
 			if startSwipe.distance_to(curSwipe) >= swipeLength:
 				print("Swipe Detected!")
