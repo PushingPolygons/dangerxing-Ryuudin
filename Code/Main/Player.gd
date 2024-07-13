@@ -4,13 +4,14 @@ var positions = [-3,0,3]
 var curPos = 1
 
 
-var swipeLength = 100
+var swipeLength = 50
 var startSwipe: Vector2
 var curSwipe: Vector2
 var swiping = false
-var threshold = 50
+var threshold = 20
 
 var swipeDir = 0
+var swipeDone = false
 
 const JUMP_VEL = 7
 var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
@@ -18,66 +19,49 @@ var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
 @onready var death_sensor = $DeathSensor
 
 
+
+
 func _process(delta):
-	swipe()
-	if swipeDir == 1:
-		if curPos <2:
+	Swipe()
+	if swipeDir == 1 and !swipeDone:
+		if curPos < positions.size() - 1:
 			curPos += 1
-			position.z = position[curPos]
-	elif swipeDir == -1:
-		if curPos >  0:
+			position.z = positions[curPos]
+		swipeDone = true
+		swipeDir = 0  # Reset swipeDir after the action
+	elif swipeDir == -1 and !swipeDone:
+		if curPos > 0:
 			curPos -= 1
-			position.z = position[curPos]
+			position.z = positions[curPos]
+		swipeDone = true
+		swipeDir = 0  # Reset swipeDir after the action
 			
 	if death_sensor.is_colliding():
 		death()
-		
+
+
 func death():
 	get_tree().reload_current_scene()
-
-func swipe():
-	var swipeLength = 1
-	var startSwipe: Vector2
-	var curSwipe: Vector2
-	var swiping = false
-	var threshold = 20
-
-
+	
+	
+func Swipe():
 	if Input.is_action_just_pressed("press"):
-		if !swiping:
-			swiping = true
-			startSwipe = get_viewport().get_mouse_position()
-			print("Start Positon: ", startSwipe)
-	if Input.is_action_just_pressed("press"):
-		if swiping:
-			curSwipe = get_viewport().get_mouse_position()
-			if startSwipe.distance_to(curSwipe) >= swipeLength:
-				print("Swipe Detected!")
-				if startSwipe.x-curSwipe.x < 0:
-					swipeDir = 1
-				else:
-					swipeDir = -1
-				swiping = false
-	else:
+		swiping = true
+		startSwipe = get_viewport().get_mouse_position()
+		swipeDone = false
+		print("Start Position: ", startSwipe)
+
+	if swiping and Input.is_action_pressed("press"):
+		curSwipe = get_viewport().get_mouse_position()
+		if startSwipe.distance_to(curSwipe) >= swipeLength:
+			if curSwipe.x > startSwipe.x + threshold:
+				swipeDir = 1  # Swipe right
+				print("Swiped Right")
+			elif curSwipe.x < startSwipe.x - threshold:
+				swipeDir = -1  # Swipe left
+				print("Swiped Left")
+				swiping = false  # Reset swiping after detecting a swipe
+
+	if Input.is_action_just_released("press"):
 		swiping = false
-		
-		
-func move_left():
-	if curPos > 0:
-		curPos -= 1
-		update_position()
 
-func move_right():
-	if curPos < positions.size() - 1:
-		curPos += 1
-		update_position()
-
-func _input(event):
-	if event.is_action_pressed("move_left"):
-		move_left()
-	if event.is_action_pressed("move_right"):
-			move_right()
-
-func update_position():
-	var target_position: Vector3
-	target_position.x = positions[curPos]
