@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cib786y4fr7cb"]
+[gd_scene load_steps=15 format=3 uid="uid://cib786y4fr7cb"]
 
 [ext_resource type="Script" path="res://Main/Main.gd" id="1"]
 [ext_resource type="Script" path="res://Main/Level.gd" id="2_42rtg"]
@@ -7,21 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="5_kptds"]
 [ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://modules/module4.tscn" id="6_egu6j"]
 [ext_resource type="PackedScene" uid="uid://urka8ho68bnr" path="res://modules/module5.tscn" id="7_152x7"]
+[ext_resource type="PackedScene" uid="uid://pvjb2m2e1aer" path="res://modules/module6.tscn" id="8_h1oeu"]
 [ext_resource type="Script" path="res://Main/Player.gd" id="8_lxyp6"]
+[ext_resource type="PackedScene" uid="uid://c86uspsro2iv4" path="res://modules/module7.tscn" id="9_wwlqe"]
 
 [sub_resource type="Environment" id="Environment_w86is"]
 ambient_light_source = 3
 ambient_light_color = Color(0.352763, 0.552752, 1, 1)
 ambient_light_sky_contribution = 0.57
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.0289
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_0feyf"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_xupn7"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqn83"]
-albedo_color = Color(0.776471, 0.0509804, 0.0588235, 1)
+[sub_resource type="BoxMesh" id="BoxMesh_nvbna"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k3utt"]
 
@@ -30,7 +28,7 @@ script = ExtResource("1")
 
 [node name="Level" type="Node3D" parent="."]
 script = ExtResource("2_42rtg")
-modules = Array[PackedScene]([ExtResource("3_bwc21"), ExtResource("4_w37r3"), ExtResource("5_kptds"), ExtResource("6_egu6j"), ExtResource("7_152x7")])
+modules = Array[PackedScene]([ExtResource("3_bwc21"), ExtResource("4_w37r3"), ExtResource("5_kptds"), ExtResource("6_egu6j"), ExtResource("7_152x7"), ExtResource("7_152x7"), ExtResource("8_h1oeu"), ExtResource("9_wwlqe")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w86is")
@@ -44,15 +42,15 @@ transform = Transform3D(-0.00126303, 0.262593, -0.964906, 0.000343725, 0.964907,
 sky_mode = 1
 
 [node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(-2.79753e-08, 0, 0.5, 0, 0.56, 0, -0.64, 0, -2.18557e-08, 0, 0, 0)
 script = ExtResource("8_lxyp6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0955694, 0.616719, -0.00185108)
-mesh = SubResource("BoxMesh_xupn7")
-surface_material_override/0 = SubResource("StandardMaterial3D_rqn83")
+transform = Transform3D(2.0114, 0, 7.10543e-15, 0, 2.33356, 0, 2.06057e-13, 0, 2.33356, -0.0955694, 0.705316, -0.00185108)
+mesh = SubResource("BoxMesh_nvbna")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0786567, 0.636203, 0.000667572)
+transform = Transform3D(2.2488, 0, 0, 0, 2.2488, 0, 2.84217e-14, 0, 2.2488, -0.0786567, 0.636203, 0.000667572)
 shape = SubResource("BoxShape3D_k3utt")
 
 [node name="DeathSensor" type="RayCast3D" parent="Player"]

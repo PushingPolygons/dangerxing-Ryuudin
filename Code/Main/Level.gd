@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var modules: Array[PackedScene] = []
-var amnt = 10
+var amnt = 14
 var rng = RandomNumberGenerator.new()
 var offset = 5
 
@@ -21,7 +21,7 @@ func spawnModule(n):
 		instance.position.x = n
 		add_child(instance)
 	else: 
-		var instance =modules[4].instantiate()
+		var instance =modules[7].instantiate()
 		instance.position.x = n
 		add_child(instance)
 		FirstObs += 1

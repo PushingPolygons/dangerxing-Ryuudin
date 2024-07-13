@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://udiibukyvb7q"]
+
+[ext_resource type="Script" path="res://Collectables/Frog.gd" id="1_qumio"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pgps4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0iii"]
+albedo_color = Color(0.321601, 0.651613, 0.242504, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tvxls"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v4okl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2lvh"]
+albedo_color = Color(0.321569, 0.65098, 0.243137, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywqf8"]
+albedo_color = Color(0.321569, 0.65098, 0.243137, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pydwm"]
+albedo_color = Color(0.321569, 0.65098, 0.243137, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an085"]
+albedo_color = Color(0.321569, 0.65098, 0.243137, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_2vo47"]
+
+[node name="Frog" type="Node3D"]
+script = ExtResource("1_qumio")
+
+[node name="FrogBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0306223, -0.326351, 0, 0.367439, 0.027198, 0, 0, 0, 0.598447, 0, 0.635163, 0)
+mesh = SubResource("CapsuleMesh_pgps4")
+skeleton = NodePath("CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_f0iii")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrogBody"]
+transform = Transform3D(1, 0, 0, 7.45058e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_tvxls")
+
+[node name="Back Right Leg" type="MeshInstance3D" parent="FrogBody"]
+transform = Transform3D(0.494727, 0.136258, 0, -0.153948, 0.437877, 0, 0, 0, 0.411929, -0.328176, -0.689088, -0.399622)
+mesh = SubResource("CapsuleMesh_v4okl")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2lvh")
+
+[node name="Back Left Leg" type="MeshInstance3D" parent="FrogBody"]
+transform = Transform3D(0.494727, 0.136258, 0, -0.153948, 0.437877, 0, 0, 0, 0.411929, -0.328176, -0.689088, 0.456196)
+mesh = SubResource("CapsuleMesh_v4okl")
+surface_material_override/0 = SubResource("StandardMaterial3D_ywqf8")
+
+[node name="Front Right Leg" type="MeshInstance3D" parent="FrogBody"]
+transform = Transform3D(-0.0531628, 0.302124, 0, -0.332613, -0.0482897, 0, 0, 0, 0.364401, -0.437603, 0.623938, -0.433282)
+mesh = SubResource("CapsuleMesh_v4okl")
+surface_material_override/0 = SubResource("StandardMaterial3D_pydwm")
+
+[node name="Front Left Leg" type="MeshInstance3D" parent="FrogBody"]
+transform = Transform3D(-0.0531628, 0.302124, 0, -0.332613, -0.0482897, 0, 0, 0, 0.364401, -0.437603, 0.623938, 0.456196)
+mesh = SubResource("CapsuleMesh_v4okl")
+surface_material_override/0 = SubResource("StandardMaterial3D_an085")
+
+[node name="RightEye" type="MeshInstance3D" parent="FrogBody"]
+transform = Transform3D(0.270516, 9.31323e-09, 0, -8.9407e-08, 0.312088, 0, 0, 0, 0.307402, 0.328053, 0.688837, 0.342149)
+mesh = SubResource("SphereMesh_2vo47")
+
+[node name="LeftEye" type="MeshInstance3D" parent="FrogBody"]
+transform = Transform3D(0.270516, 9.31323e-09, 0, -9.31323e-08, 0.312088, 0, 0, 0, 0.307402, 0.328053, 0.688836, -0.277383)
+mesh = SubResource("SphereMesh_2vo47")

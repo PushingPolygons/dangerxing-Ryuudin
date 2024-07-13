@@ -24,7 +24,7 @@ var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
 
 
 
-func _process(delta):
+func _process(_delta):
 	Swipe()
 	if swipeDir == 1 and !swipeDone:
 		if curPos < positions.size() - 1:
