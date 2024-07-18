@@ -27,11 +27,6 @@ albedo_color = Color(0.321569, 0.65098, 0.243137, 1)
 
 [node name="Frog" type="Node3D"]
 script = ExtResource("1_qumio")
-points = null
-move_speed = null
-
-[node name="FrogSensor" type="RayCast3D" parent="."]
-transform = Transform3D(0.0276665, 0.597426, 0.111268, 0.367199, -0.0170914, -1.41729, -0.0149138, 0.0195564, -18.5798, -0.3286, 0.386474, -0.0210409)
 
 [node name="FrogBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0306223, -0.326351, 0, 0.367439, 0.027198, 0, 0, 0, 0.598447, 0, 0.278613, 0)
@@ -70,3 +65,6 @@ mesh = SubResource("SphereMesh_2vo47")
 [node name="LeftEye" type="MeshInstance3D" parent="FrogBody"]
 transform = Transform3D(0.270516, 9.31323e-09, 0, -9.31323e-08, 0.312088, 0, 0, 0, 0.307402, 0.328053, 0.688836, -0.277383)
 mesh = SubResource("SphereMesh_2vo47")
+
+[node name="FrogSensor" type="RayCast3D" parent="FrogBody"]
+transform = Transform3D(0.988832, -0.0475034, -8.01296, 0.142039, 0.0133524, 56.1432, -0.0451313, -0.998782, 1.13166, 0, 0, 0.580888)

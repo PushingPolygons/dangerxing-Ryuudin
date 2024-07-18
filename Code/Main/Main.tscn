@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cib786y4fr7cb"]
+[gd_scene load_steps=17 format=3 uid="uid://cib786y4fr7cb"]
 
 [ext_resource type="Script" path="res://Main/Main.gd" id="1"]
 [ext_resource type="Script" path="res://Main/Level.gd" id="2_42rtg"]
@@ -24,8 +24,6 @@ volumetric_fog_density = 0.0289
 [sub_resource type="BoxMesh" id="BoxMesh_tauds"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2jv14"]
-
-[sub_resource type="GDScript" id="GDScript_uuoc0"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1")
@@ -59,12 +57,8 @@ script = ExtResource("8_lxyp6")
 mesh = SubResource("BoxMesh_tauds")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+[node name="Player" type="CollisionShape3D" parent="Player"]
 shape = SubResource("BoxShape3D_2jv14")
 
 [node name="DeathSensor" type="RayCast3D" parent="Player"]
 transform = Transform3D(-24.7835, -0.987464, 0.019694, -27.4215, 0.0471033, 0.983745, -153.868, 0.150656, -0.178489, 0.5148, 0.204134, 0)
-
-[node name="FrogSensor" type="RayCast3D" parent="Player"]
-transform = Transform3D(-24.7835, -0.987464, 0.019694, -27.4215, 0.0471033, 0.983745, -153.868, 0.150656, -0.178489, 0.5148, 0.204134, 0)
-script = SubResource("GDScript_uuoc0")
