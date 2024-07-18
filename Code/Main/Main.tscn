@@ -62,3 +62,9 @@ shape = SubResource("BoxShape3D_2jv14")
 
 [node name="DeathSensor" type="RayCast3D" parent="Player"]
 transform = Transform3D(-24.7835, -0.987464, 0.019694, -27.4215, 0.0471033, 0.983745, -153.868, 0.150656, -0.178489, 0.5148, 0.204134, 0)
+
+[node name="PauseButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_button_pressed"]
