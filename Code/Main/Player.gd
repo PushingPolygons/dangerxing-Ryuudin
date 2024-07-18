@@ -20,7 +20,6 @@ const JUMP_VEL = 7
 var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
 
 @onready var death_sensor = $DeathSensor
-@onready var frog_sensor = $FrogSensor
 
 
 var score = 0
