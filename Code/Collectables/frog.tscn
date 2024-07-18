@@ -7,7 +7,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0iii"]
 albedo_color = Color(0.321601, 0.651613, 0.242504, 1)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tvxls"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cgtlv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v4okl"]
 
@@ -29,14 +29,14 @@ albedo_color = Color(0.321569, 0.65098, 0.243137, 1)
 script = ExtResource("1_qumio")
 
 [node name="FrogBody" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0306223, -0.326351, 0, 0.367439, 0.027198, 0, 0, 0, 0.598447, 0, 0.635163, 0)
+transform = Transform3D(0.0306223, -0.326351, 0, 0.367439, 0.027198, 0, 0, 0, 0.598447, 0, 0.278613, 0)
 mesh = SubResource("CapsuleMesh_pgps4")
 skeleton = NodePath("CollisionShape3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_f0iii")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FrogBody"]
-transform = Transform3D(1, 0, 0, 7.45058e-09, 1, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_tvxls")
+transform = Transform3D(1, 7.45058e-09, 0, 7.45058e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_cgtlv")
 
 [node name="Back Right Leg" type="MeshInstance3D" parent="FrogBody"]
 transform = Transform3D(0.494727, 0.136258, 0, -0.153948, 0.437877, 0, 0, 0, 0.411929, -0.328176, -0.689088, -0.399622)

@@ -21,7 +21,7 @@ var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
 
 @onready var death_sensor = $DeathSensor
 
-
+var score = 0
 
 
 func _process(_delta):
@@ -85,4 +85,13 @@ func Swipe():
 
 	if Input.is_action_just_released("press"):
 		swiping = false
+		
+func _on_Player_body_entered(body):
+	if body.is_in_group("frog"):
+		collect_frog(body)
 
+func collect_frog(frog):
+	score += 1
+	frog.queue_free()  # Remove the frog from the scene
+	print("Frog collected! Score:", score)
+	
