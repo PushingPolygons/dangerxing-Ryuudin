@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfe30plcs7om"]
 
-[ext_resource type="Script" path="res://PauseMenu.gd" id="1_mihuc"]
+[ext_resource type="Script" path="res://UI/PauseMenu.gd" id="1_mihuc"]
 [ext_resource type="Script" path="res://UI/Quit.gd" id="2_pkp6l"]
 
 [node name="PauseMenu" type="Control"]
+top_level = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

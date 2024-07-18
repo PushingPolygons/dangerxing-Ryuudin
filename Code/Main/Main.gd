@@ -12,17 +12,20 @@ func _ready():
 	else:
 		print("Failed to load PauseMenu.tscn")
 		
-	pause_button.pressed.connect(_on_PauseButton_pressed)
+	pause_button.pressed.connect(_on_Menu_pressed)
 	
 func _input(event):
 	if event.is_action_pressed("ui_pause"):
-		_on_PauseButton_pressed()
+		_on_Menu_pressed()
 
-func _on_pause_button_pressed():
-	get_tree().paused = true
-	pause_menu.visible = true
-
-
-func _on_PauseButton_pressed():
+func _on_Menu_pressed():
 	get_tree().paused = true
 	pause_menu.show()
+	$PauseButton.hide()
+	print("Menu opened with ESC Key")
+
+
+func _on_button_pressed():
+	get_tree().paused = true
+	pause_menu.visible = true
+	print("Menu Clicked by Mouse")

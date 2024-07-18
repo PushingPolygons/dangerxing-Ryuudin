@@ -6,8 +6,14 @@ extends Control
 
 func _ready():
 	self.visible = false
-	resume_button.pressed.connect(_on_resume_pressed)
-	quit_button.pressed.connect(_on_quit_pressed)
+	
+	
+func _input(event):
+	if event.is_action_pressed("exit"):
+		leavegame()
+	if event.is_action_pressed("resume"):
+		resume()
+
 
 
 func _on_resume_pressed():
@@ -19,3 +25,11 @@ func _on_resume_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 	print("Quit button pressed")
+	
+func leavegame():
+	get_tree().quit()
+	
+func resume():
+	get_tree().paused = false
+	self.hide()
+	print("Resume button pressed")

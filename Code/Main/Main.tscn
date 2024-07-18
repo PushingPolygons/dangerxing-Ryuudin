@@ -64,7 +64,11 @@ shape = SubResource("BoxShape3D_2jv14")
 transform = Transform3D(-24.7835, -0.987464, 0.019694, -27.4215, 0.0471033, 0.983745, -153.868, 0.150656, -0.178489, 0.5148, 0.204134, 0)
 
 [node name="PauseButton" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+anchors_preset = -1
+anchor_right = 0.025
+anchor_bottom = 0.012
+offset_right = 24.2
+offset_bottom = 23.224
+text = "Menu"
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_button_pressed"]
