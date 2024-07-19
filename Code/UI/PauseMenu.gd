@@ -6,17 +6,8 @@ extends Control
 
 func _ready():
 	self.visible = false
-	
-#attempted to set focus on UI element to prevent conflictions, didn't work.
-func _process(_delta: float):
-	if get_tree().paused:
-		self.visible = true
-		grab_focus()
-	else:
-		self.visible = false
-		
 
-#These buttons do nothing?? WHY?!?!?
+
 func _on_resume_pressed():
 	get_tree().paused = false
 	hide()
@@ -28,11 +19,7 @@ func _on_quit_pressed():
 	print("Quit button pressed")
 	
 	
-	
-	
-	
-	
-	#Attempt to fix another way failed. "F" button works when menu is not open, but once open no longer quits game.
+
 func _input(event):
 	if event.is_action_pressed("exit"):
 		leavegame()
