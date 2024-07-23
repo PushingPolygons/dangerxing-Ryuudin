@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3sve2nrss2io"]
+[gd_scene load_steps=7 format=3 uid="uid://3sve2nrss2io"]
 
 [ext_resource type="Script" path="res://modules/module.gd" id="1_4faxm"]
 [ext_resource type="Material" uid="uid://b84cwv5kxjjqs" path="res://Art/materials/grey.tres" id="2_naijd"]
@@ -11,10 +11,6 @@ data = PackedVector3Array(-3, 0.2, -4.6667, -3, -0.2, -4.6667, -3, 0.2, -5, -3, 
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jtfyl"]
 albedo_color = Color(0.329412, 0.164706, 0.105882, 1)
-metallic = 1.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4u72"]
-albedo_color = Color(0.333333, 1, 0.113725, 1)
 metallic = 1.0
 
 [node name="Node3D" type="Node3D"]
@@ -31,12 +27,13 @@ mesh = SubResource("PlaneMesh_e1t2r")
 skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("2_naijd")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(0.0145469, 0, 0, 0, 0.000159933, 0.0169268, 0, -0.0199203, 0.000135899, 0, 0.377623, 3.99241)
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.00680155, 0, 0, 0, 8.38175e-05, 0.00929885, 0, -0.0104398, 7.46571e-05, 0, 0.377623, 0.231621)
 mesh = ExtResource("3_lrff1")
+skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_jtfyl")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(0.0145469, 0, 0, 0, 0.000159933, 0.0169268, 0, -0.0199203, 0.000135899, 0, 0.377623, 1.3099)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.00680155, 0, 0, 0, 8.38175e-05, 0.00929885, 0, -0.0104398, 7.46571e-05, 0, 0.377623, 3.44078)
 mesh = ExtResource("3_lrff1")
-surface_material_override/0 = SubResource("StandardMaterial3D_o4u72")
+surface_material_override/0 = SubResource("StandardMaterial3D_jtfyl")

@@ -35,7 +35,7 @@ surface_material_override/0 = ExtResource("2_yx4t3")
 shape = SubResource("ConcavePolygonShape3D_dgpyi")
 
 [node name="Red Car" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-0.368719, 0, 0.00652484, 0, 0.542328, 0, -0.00378417, 0, -0.635764, 1.2057, 0.243547, 1.64806)
+transform = Transform3D(-0.30125, 0, 0.00401783, 0, 0.294901, 0, -0.00309173, 0, -0.391487, 1.2057, 0.243547, 2.14849)
 mesh = ExtResource("3_x1j16")
 skin = SubResource("Skin_6d363")
 skeleton = NodePath("../..")
@@ -44,7 +44,7 @@ surface_material_override/3 = SubResource("StandardMaterial3D_srv3u")
 surface_material_override/4 = SubResource("StandardMaterial3D_4if45")
 
 [node name="Red Car2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-0.368719, 0, 0.00652484, 0, 0.542328, 0, -0.00378417, 0, -0.635764, 1.2057, 0.243547, -4.32719)
+transform = Transform3D(-0.30125, 0, 0.00401783, 0, 0.291748, 0, -0.00309173, 0, -0.391487, 1.2057, 0.243547, -3.81125)
 mesh = ExtResource("3_x1j16")
 skin = SubResource("Skin_6d363")
 skeleton = NodePath("../..")

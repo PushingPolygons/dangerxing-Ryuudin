@@ -1,12 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://c78ayj4g08730"]
+[gd_scene load_steps=10 format=3 uid="uid://c78ayj4g08730"]
 
 [ext_resource type="Script" path="res://modules/module.gd" id="1_g3mrn"]
-[ext_resource type="ArrayMesh" uid="uid://dbto8bkl5hh23" path="res://Art/models/module4.obj" id="1_qe6my"]
 [ext_resource type="Material" uid="uid://b84cwv5kxjjqs" path="res://Art/materials/grey.tres" id="2_46vx4"]
-[ext_resource type="Material" uid="uid://bbi101762vk45" path="res://Art/materials/red.tres" id="3_ibdsp"]
+[ext_resource type="ArrayMesh" uid="uid://cgtkrb8vtwr3d" path="res://Art/models/car.obj" id="3_byq3j"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_56jdi"]
 data = PackedVector3Array(-3, 0.2, -4.6667, -3, -0.2, -4.6667, -3, 0.2, -5, -3, 0.2, -5, -3, -0.2, -4.6667, -3, -0.2, -5, -3, 0.2, -5, -3, -0.2, -5, 3, 0.2, -5, 3, 0.2, -5, -3, -0.2, -5, 3, -0.2, -5, 3, 0.2, 4.6667, 3, -0.2, 4.6667, 3, 0.2, 5, 3, 0.2, 5, 3, -0.2, 4.6667, 3, -0.2, 5, 3, 0.2, 5, 3, -0.2, 5, -3, 0.2, 5, -3, 0.2, 5, 3, -0.2, 5, -3, -0.2, 5, 3, -0.2, 4.6667, -3, -0.2, 4.6667, 3, -0.2, 5, 3, -0.2, 5, -3, -0.2, 4.6667, -3, -0.2, 5, 3, 0.2, 5, -3, 0.2, 5, 3, 2, 5, 3, 2, 5, -3, 0.2, 5, -3, 2, 5, -3, 0.2, -4.6667, -3, 0.2, -5, -3, 2, -4.6667, -3, 2, -4.6667, -3, 0.2, -5, -3, 2, -5, -3, 0.2, -4.6667, 3, 0.2, -4.6667, -3, 0.2, 4.6667, -3, 0.2, 4.6667, 3, 0.2, -4.6667, 3, 0.2, 4.6667, 3, -0.2, -5, -3, -0.2, -5, 3, -0.2, -4.6667, 3, -0.2, -4.6667, -3, -0.2, -5, -3, -0.2, -4.6667, 3, -0.2, -4.6667, -3, -0.2, -4.6667, 3, -0.2, 4.6667, 3, -0.2, 4.6667, -3, -0.2, -4.6667, -3, -0.2, 4.6667, 3, 0.2, -5, 3, -0.2, -5, 3, 0.2, -4.6667, 3, 0.2, -4.6667, 3, -0.2, -5, 3, -0.2, -4.6667, 3, 0.2, -4.6667, 3, -0.2, -4.6667, 3, 0.2, 4.6667, 3, 0.2, 4.6667, 3, -0.2, -4.6667, 3, -0.2, 4.6667, -3, 0.2, 5, -3, -0.2, 5, -3, 0.2, 4.6667, -3, 0.2, 4.6667, -3, -0.2, 5, -3, -0.2, 4.6667, -3, 0.2, 4.6667, -3, -0.2, 4.6667, -3, 0.2, -4.6667, -3, 0.2, -4.6667, -3, -0.2, 4.6667, -3, -0.2, -4.6667, -3, 2, 4.6667, 3, 2, 4.6667, -3, 2, 5, -3, 2, 5, 3, 2, 4.6667, 3, 2, 5, -3, 0.2, 5, -3, 0.2, 4.6667, -3, 2, 5, -3, 2, 5, -3, 0.2, 4.6667, -3, 2, 4.6667, -3, 0.2, 4.6667, 3, 0.2, 4.6667, -3, 2, 4.6667, -3, 2, 4.6667, 3, 0.2, 4.6667, 3, 2, 4.6667, 3, 0.2, 4.6667, 3, 0.2, 5, 3, 2, 4.6667, 3, 2, 4.6667, 3, 0.2, 5, 3, 2, 5, -3, 2, -5, 3, 2, -5, -3, 2, -4.6667, -3, 2, -4.6667, 3, 2, -5, 3, 2, -4.6667, 3, 0.2, -4.6667, -3, 0.2, -4.6667, 3, 2, -4.6667, 3, 2, -4.6667, -3, 0.2, -4.6667, -3, 2, -4.6667, 3, 0.2, -5, 3, 0.2, -4.6667, 3, 2, -5, 3, 2, -5, 3, 0.2, -4.6667, 3, 2, -4.6667, -3, 0.2, -5, 3, 0.2, -5, -3, 2, -5, -3, 2, -5, 3, 0.2, -5, 3, 2, -5, -0.3, 2, 2.2, -0.3, 0, 2.2, -0.3, 2, -2.2, -0.3, 2, -2.2, -0.3, 0, 2.2, -0.3, 0, -2.2, -0.3, 2, -2.2, -0.3, 0, -2.2, 0.3, 2, -2.2, 0.3, 2, -2.2, -0.3, 0, -2.2, 0.3, 0, -2.2, 0.3, 2, -2.2, 0.3, 0, -2.2, 0.3, 2, 2.2, 0.3, 2, 2.2, 0.3, 0, -2.2, 0.3, 0, 2.2, 0.3, 2, 2.2, 0.3, 0, 2.2, -0.3, 2, 2.2, -0.3, 2, 2.2, 0.3, 0, 2.2, -0.3, 0, 2.2, 0.3, 0, -2.2, -0.3, 0, -2.2, 0.3, 0, 2.2, 0.3, 0, 2.2, -0.3, 0, -2.2, -0.3, 0, 2.2, -0.3, 2, -2.2, 0.3, 2, -2.2, -0.3, 2, 2.2, -0.3, 2, 2.2, 0.3, 2, -2.2, 0.3, 2, 2.2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rdnk3"]
+
+[sub_resource type="Skin" id="Skin_vkqes"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bvkr"]
+albedo_color = Color(0.992157, 0.156863, 0.129412, 1)
+metallic = 0.85
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7uva"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4pmr"]
+albedo_color = Color(0, 0, 0, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_g3mrn")
@@ -16,7 +28,16 @@ script = ExtResource("1_g3mrn")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_56jdi")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = ExtResource("1_qe6my")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(2.93175, 0, 0, 0, 1, 0, 0, 0, 5.04118, 0.0247416, 0.0892491, 0.034827)
+mesh = SubResource("PlaneMesh_rdnk3")
 surface_material_override/0 = ExtResource("2_46vx4")
-surface_material_override/1 = ExtResource("3_ibdsp")
+
+[node name="Red Car" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.30125, 0, 0.00401783, 0, 0.294901, 0, -0.00309173, 0, -0.391487, 1.2057, 0.243547, -0.741729)
+mesh = ExtResource("3_byq3j")
+skin = SubResource("Skin_vkqes")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_0bvkr")
+surface_material_override/3 = SubResource("StandardMaterial3D_u7uva")
+surface_material_override/4 = SubResource("StandardMaterial3D_m4pmr")
