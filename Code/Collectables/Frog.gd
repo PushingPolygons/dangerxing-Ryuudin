@@ -4,6 +4,9 @@ extends Node3D
 
 @export var move_speed: float = 10.0
 @onready var frog_sensor = $FrogSensor
+@onready var frog_sensor_side = $FrogSensorSide
+@onready var frog_sensor_side2 = $FrogSensorSide2
+@onready var frog_sensor_rear = $FrogSensorRear
 
 func _ready():
 	frog_sensor.enabled = true
@@ -14,7 +17,6 @@ func collect():
 	queue_free()
 	var main = get_tree().root.get_node("Main")
 	if main:
-		print("Main Scene Found")
 		main.add_score(1)
 	
 func _process(delta):
@@ -22,5 +24,10 @@ func _process(delta):
 	
 	if frog_sensor.is_colliding():
 		collect()
-	
+	if frog_sensor_side.is_colliding():
+		collect()
+	if frog_sensor_side2.is_colliding():
+		collect()
+	if frog_sensor_rear.is_colliding():
+		collect()
 

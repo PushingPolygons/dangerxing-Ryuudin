@@ -29,6 +29,15 @@ script = ExtResource("1_qumio")
 [node name="FrogSensor" type="RayCast3D" parent="."]
 transform = Transform3D(0.0276665, 0.597426, 0.111268, 0.367199, -0.0170914, -1.41729, -0.0149138, 0.0195564, -18.5798, -0.3286, 0.386474, -0.0210409)
 
+[node name="FrogSensorRear" type="RayCast3D" parent="."]
+transform = Transform3D(-0.0276527, -0.597444, -0.0940821, 0.367199, -0.0170914, -1.41729, 0.0149394, -0.0190038, 18.5799, 0.327882, 0.386474, -0.0210409)
+
+[node name="FrogSensorSide" type="RayCast3D" parent="."]
+transform = Transform3D(-0.0161412, -0.00729351, -18.5661, 0.367199, -0.0170914, -1.41729, -0.0269688, -0.597702, 0.723257, -0.0418665, 0.386474, 0.273767)
+
+[node name="FrogSensorSide2" type="RayCast3D" parent="."]
+transform = Transform3D(0.0154613, -0.00766643, 18.5783, 0.367199, -0.0170914, -1.41729, 0.0273643, 0.597697, -0.258409, -0.0418665, 0.386474, -0.297578)
+
 [node name="FrogBody" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0306223, -0.326351, 0, 0.367439, 0.027198, 0, 0, 0, 0.598447, 0, 0.278613, 0)
 mesh = SubResource("CapsuleMesh_pgps4")
