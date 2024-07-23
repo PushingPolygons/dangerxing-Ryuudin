@@ -96,5 +96,4 @@ func Swipe():
 		swiping = false
 		
 	
-func _on_player_hit():
-	hud.lose_life()
+

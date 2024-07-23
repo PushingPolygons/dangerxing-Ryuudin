@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cib786y4fr7cb"]
+[gd_scene load_steps=18 format=3 uid="uid://cib786y4fr7cb"]
 
 [ext_resource type="Script" path="res://Main/Main.gd" id="1"]
 [ext_resource type="Script" path="res://Main/Level.gd" id="2_42rtg"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c86uspsro2iv4" path="res://modules/module7.tscn" id="9_wwlqe"]
 [ext_resource type="Script" path="res://Main/Spawner.gd" id="11_psjgy"]
 [ext_resource type="PackedScene" uid="uid://udiibukyvb7q" path="res://Collectables/frog.tscn" id="12_wl12o"]
+[ext_resource type="ArrayMesh" uid="uid://6ss0k00i12uv" path="res://Art/models/truck_obj.obj" id="13_kletw"]
 
 [sub_resource type="Environment" id="Environment_w86is"]
 ambient_light_source = 3
@@ -57,11 +58,16 @@ script = ExtResource("8_lxyp6")
 mesh = SubResource("BoxMesh_tauds")
 skeleton = NodePath("../..")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(-0.000127071, 0, 0.295102, 0, 0.183662, 0, -0.316553, 0, -0.00011846, 0, -0.470609, 0)
+mesh = ExtResource("13_kletw")
+skeleton = NodePath("../../..")
+
 [node name="Player" type="CollisionShape3D" parent="Player"]
 shape = SubResource("BoxShape3D_2jv14")
 
 [node name="DeathSensor" type="RayCast3D" parent="Player"]
-transform = Transform3D(-24.7835, -0.987464, 0.019694, -27.4215, 0.0471033, 0.983745, -153.868, 0.150656, -0.178489, 0.5148, 0.204134, 0)
+transform = Transform3D(-24.5241, -0.989066, 0.0196562, -27.1345, 0.0471797, 0.981855, -152.257, 0.1509, -0.178146, -0.0970673, 0.204134, 0)
 
 [node name="PauseButton" type="Button" parent="."]
 anchors_preset = -1
@@ -72,10 +78,11 @@ offset_bottom = 23.224
 text = "Menu"
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 509.0
-offset_top = 3.0
-offset_right = 519.0
-offset_bottom = 26.0
+offset_left = 543.0
+offset_top = 2.0
+offset_right = 553.0
+offset_bottom = 25.0
+size_flags_vertical = 0
 horizontal_alignment = 1
 autowrap_mode = 2
 

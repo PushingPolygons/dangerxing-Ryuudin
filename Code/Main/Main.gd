@@ -13,6 +13,8 @@ func add_score(points):
 
 func update_score_label():
 	score_label.text = "Score: " + str(score)
+	if score > 5:
+		print("Speed increase")
 
 func _ready():
 	var pause_menu_scene = load("res://UI/pause_menu.tscn")
