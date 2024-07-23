@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi743tjek6tbm"]
+
+[sub_resource type="GDScript" id="GDScript_viddn"]
+script/source = "extends Control
+
+var score = 0
+var lives = 3
+
+@onready var score_label = $ScoreLabel
+@onready var lives_label = $LivesLabel
+
+func _ready():
+	update_score()
+	update_lives()
+
+func update_score():
+	score_label.text = \"Score: %d\" % score
+
+func update_lives():
+	lives_label.text = \"Lives: %d\" % lives
+
+func add_score(points):
+	score += points
+	update_score()
+
+func lose_life():
+	lives -= 1
+	update_lives()
+	if lives <= 0:
+		game_over()
+
+func game_over():
+	get_tree().reload_current_scene()
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_viddn")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 520.0
+offset_top = 3.0
+offset_right = 521.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "0123456789"
+
+[node name="LivesLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 3.0
+offset_right = 1097.0
+offset_bottom = 26.0
+text = "123"

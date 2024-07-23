@@ -20,10 +20,17 @@ const JUMP_VEL = 7
 var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
 
 @onready var death_sensor = $DeathSensor
+@onready var hud_scene = preload("res://Main/HUD.tscn")
 
+var hud
 
 var score = 0
 
+func _ready():
+	if hud: 
+		print("Hud Found")
+	else:
+		print ("Not found")
 
 func _process(_delta):
 	Swipe()
@@ -89,3 +96,5 @@ func Swipe():
 		swiping = false
 		
 	
+func _on_player_hit():
+	hud.lose_life()

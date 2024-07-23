@@ -1,7 +1,18 @@
 extends Node
 
 @onready var pause_button = $PauseButton
+@onready var score_label = $ScoreLabel
 var pause_menu
+
+var score = 0
+
+func add_score(points):
+	score += points
+	update_score_label()
+	print("Score: ", score +1)
+
+func update_score_label():
+	score_label.text = "Score: " + str(score)
 
 func _ready():
 	var pause_menu_scene = load("res://UI/pause_menu.tscn")
