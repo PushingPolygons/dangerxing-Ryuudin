@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://udiibukyvb7q"]
+[gd_scene load_steps=11 format=3 uid="uid://udiibukyvb7q"]
 
 [ext_resource type="Script" path="res://Collectables/Frog.gd" id="1_qumio"]
+[ext_resource type="AudioStream" uid="uid://djj5ake0uhx51" path="res://Sounds/Frog Collect Sound.mp3" id="2_xt7ay"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_pgps4"]
 
@@ -25,6 +26,9 @@ albedo_color = Color(0.321569, 0.65098, 0.243137, 1)
 
 [node name="Frog" type="Node3D"]
 script = ExtResource("1_qumio")
+
+[node name="CollectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xt7ay")
 
 [node name="FrogSensor" type="RayCast3D" parent="."]
 transform = Transform3D(0.0276665, 0.597426, 0.111268, 0.367199, -0.0170914, -1.41729, -0.0149138, 0.0195564, -18.5798, -0.3286, 0.386474, -0.0210409)
@@ -71,3 +75,5 @@ mesh = SubResource("SphereMesh_2vo47")
 [node name="LeftEye" type="MeshInstance3D" parent="FrogBody"]
 transform = Transform3D(0.270516, 9.31323e-09, 0, -9.31323e-08, 0.312088, 0, 0, 0, 0.307402, 0.328053, 0.688836, -0.277383)
 mesh = SubResource("SphereMesh_2vo47")
+
+[connection signal="finished" from="CollectSound" to="." method="_on_audio_stream_player_finished"]

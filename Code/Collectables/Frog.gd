@@ -8,12 +8,16 @@ extends Node3D
 @onready var frog_sensor_side2 = $FrogSensorSide2
 @onready var frog_sensor_rear = $FrogSensorRear
 
+@onready var collect_sound = $CollectSound
+
 func _ready():
 	frog_sensor.enabled = true
-	
+	print("Ready function called")
+
 
 func collect():
 	print("collected")
+	collection_noise()
 	queue_free()
 	var main = get_tree().root.get_node("Main")
 	if main:
@@ -30,4 +34,9 @@ func _process(delta):
 		collect()
 	if frog_sensor_rear.is_colliding():
 		collect()
+
+
+func collection_noise():
+		collect_sound.play()
+
 

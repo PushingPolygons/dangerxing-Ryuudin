@@ -21,6 +21,7 @@ var gravity = ProjectSettings.get_setting ("physics/3d/default_gravity")
 
 @onready var death_sensor = $DeathSensor
 @onready var hud_scene = preload("res://Main/HUD.tscn")
+@onready var Crash = $CrashSound
 
 var hud
 
@@ -71,6 +72,7 @@ func _process(_delta):
 
 
 func death():
+	death_sound()
 	get_tree().reload_current_scene()
 	
 	
@@ -97,3 +99,6 @@ func Swipe():
 		
 	
 
+func death_sound():
+	print ("played death sound")
+	Crash.play()

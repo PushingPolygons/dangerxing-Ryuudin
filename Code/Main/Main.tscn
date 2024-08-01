@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cib786y4fr7cb"]
+[gd_scene load_steps=28 format=3 uid="uid://cib786y4fr7cb"]
 
 [ext_resource type="Script" path="res://Main/Main.gd" id="1"]
 [ext_resource type="Script" path="res://Main/Level.gd" id="2_42rtg"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c86uspsro2iv4" path="res://modules/module7.tscn" id="9_wwlqe"]
 [ext_resource type="Script" path="res://Main/Spawner.gd" id="11_psjgy"]
 [ext_resource type="PackedScene" uid="uid://udiibukyvb7q" path="res://Collectables/frog.tscn" id="12_wl12o"]
+[ext_resource type="AudioStream" uid="uid://cdfeo37bjbg2j" path="res://Sounds/Car Crash Sound.mp3" id="13_3jf2r"]
 [ext_resource type="ArrayMesh" uid="uid://6ss0k00i12uv" path="res://Art/models/truck_obj.obj" id="13_kletw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p2l64"]
@@ -83,6 +84,9 @@ sky_mode = 1
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.57583, 0)
 script = ExtResource("8_lxyp6")
+
+[node name="CrashSound" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("13_3jf2r")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 mesh = SubResource("BoxMesh_tauds")
