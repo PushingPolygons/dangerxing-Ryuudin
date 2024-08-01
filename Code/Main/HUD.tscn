@@ -31,6 +31,8 @@ func lose_life():
 
 func game_over():
 	get_tree().reload_current_scene()
+	
+
 "
 
 [node name="Control" type="Control"]

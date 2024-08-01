@@ -11,7 +11,7 @@ data = PackedVector3Array(-3, 0.2, -4.6667, -3, -0.2, -4.6667, -3, 0.2, -5, -3, 
 [sub_resource type="PlaneMesh" id="PlaneMesh_mn8ea"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mff2c"]
-albedo_color = Color(0.303956, 0.305918, 0.28151, 1)
+albedo_color = Color(1, 1, 0, 1)
 metallic = 1.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8ebsi"]

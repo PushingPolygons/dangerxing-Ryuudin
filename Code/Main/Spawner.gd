@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var frog_scene: PackedScene
-@export var spawn_interval: float = 2.0  # Time in seconds between frog spawns
+@export var spawn_interval: float = 1.2 # Time in seconds between frog spawns
 @export var spawn_positions: Array[Vector3] = [Vector3(10, 0, -3), Vector3(7, 0, 0), Vector3(5, 0, 3)]
 
 var timer = 0.0
