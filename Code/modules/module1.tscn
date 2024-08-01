@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://p71xwawyruxj"]
+[gd_scene load_steps=16 format=3 uid="uid://p71xwawyruxj"]
 
 [ext_resource type="Script" path="res://modules/module.gd" id="1_ff3uv"]
 [ext_resource type="Material" uid="uid://b84cwv5kxjjqs" path="res://Art/materials/grey.tres" id="2_yx4t3"]
@@ -20,6 +20,21 @@ metallic = 0.85
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4if45"]
 albedo_color = Color(0, 0, 0, 1)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_xasmt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecf2f"]
+albedo_color = Color(0.0627451, 0.458824, 0.172549, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ddxag"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pojm5"]
+albedo_color = Color(0.588235, 0.294118, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_54v1h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkopn"]
+albedo_color = Color(0.0901961, 0.239216, 0.027451, 1)
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ff3uv")
 
@@ -34,8 +49,18 @@ surface_material_override/0 = ExtResource("2_yx4t3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_dgpyi")
 
-[node name="Red Car" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-0.30125, 0, 0.00401783, 0, 0.294901, 0, -0.00309173, 0, -0.391487, 1.2057, 0.243547, 2.14849)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25378, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_dgpyi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(2.93175, 0, 0, 0, 1, 0, 0, 0, 5.04118, 5.87159, 0.0892491, 0.034827)
+mesh = SubResource("PlaneMesh_d3ruq")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = ExtResource("2_yx4t3")
+
+[node name="Red Car2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-0.383708, 0, 0.00413167, 0, 0.304396, 0, -0.00393799, 0, -0.40258, 1.50502, 0.243547, -3.81125)
 mesh = ExtResource("3_x1j16")
 skin = SubResource("Skin_6d363")
 skeleton = NodePath("../..")
@@ -43,11 +68,74 @@ surface_material_override/0 = SubResource("StandardMaterial3D_npc7d")
 surface_material_override/3 = SubResource("StandardMaterial3D_srv3u")
 surface_material_override/4 = SubResource("StandardMaterial3D_4if45")
 
-[node name="Red Car2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-0.30125, 0, 0.00401783, 0, 0.291748, 0, -0.00309173, 0, -0.391487, 1.2057, 0.243547, -3.81125)
+[node name="Red Car2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.383708, 0, 0.00413167, 0, 0.304396, 0, -0.00393799, 0, -0.40258, 5.57665, 0.243547, -3.81125)
 mesh = ExtResource("3_x1j16")
 skin = SubResource("Skin_6d363")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_npc7d")
 surface_material_override/3 = SubResource("StandardMaterial3D_srv3u")
 surface_material_override/4 = SubResource("StandardMaterial3D_4if45")
+
+[node name="Red Car3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.383708, 0, 0.00413167, 0, 0.304396, 0, -0.00393799, 0, -0.40258, 0.274543, 0.243547, 2.21569)
+mesh = ExtResource("3_x1j16")
+skin = SubResource("Skin_6d363")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_npc7d")
+surface_material_override/3 = SubResource("StandardMaterial3D_srv3u")
+surface_material_override/4 = SubResource("StandardMaterial3D_4if45")
+
+[node name="Red Car4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.383708, 0, 0.00413167, 0, 0.304396, 0, -0.00393799, 0, -0.40258, 4.81751, 0.243547, 2.57196)
+mesh = ExtResource("3_x1j16")
+skin = SubResource("Skin_6d363")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_npc7d")
+surface_material_override/3 = SubResource("StandardMaterial3D_srv3u")
+surface_material_override/4 = SubResource("StandardMaterial3D_4if45")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.1788, 0, 0, 0, 1, 0, 0, 0, 72.1908, 0.801302, 0, 0)
+mesh = SubResource("PlaneMesh_xasmt")
+surface_material_override/0 = SubResource("StandardMaterial3D_ecf2f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 0, 0.932333, -8.06317)
+mesh = SubResource("CylinderMesh_ddxag")
+surface_material_override/0 = SubResource("StandardMaterial3D_pojm5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_54v1h")
+surface_material_override/0 = SubResource("StandardMaterial3D_fkopn")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 4.92367, 0.932333, -6.88485)
+mesh = SubResource("CylinderMesh_ddxag")
+surface_material_override/0 = SubResource("StandardMaterial3D_pojm5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D3"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_54v1h")
+surface_material_override/0 = SubResource("StandardMaterial3D_fkopn")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 2.57274, 0.932333, -11.4365)
+mesh = SubResource("CylinderMesh_ddxag")
+surface_material_override/0 = SubResource("StandardMaterial3D_pojm5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D4"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_54v1h")
+surface_material_override/0 = SubResource("StandardMaterial3D_fkopn")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 2.00168, 0.932333, 8.78995)
+mesh = SubResource("CylinderMesh_ddxag")
+surface_material_override/0 = SubResource("StandardMaterial3D_pojm5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D5"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_54v1h")
+surface_material_override/0 = SubResource("StandardMaterial3D_fkopn")

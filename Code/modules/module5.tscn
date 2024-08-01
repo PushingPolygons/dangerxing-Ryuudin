@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://urka8ho68bnr"]
+[gd_scene load_steps=14 format=3 uid="uid://urka8ho68bnr"]
 
 [ext_resource type="Script" path="res://modules/module.gd" id="1_qce0a"]
 [ext_resource type="Material" uid="uid://b84cwv5kxjjqs" path="res://Art/materials/grey.tres" id="2_xcrdb"]
@@ -7,6 +7,28 @@
 data = PackedVector3Array(-10, 0.2, -4.6667, -10, -0.2, -4.6667, -10, 0.2, -5, -10, 0.2, -5, -10, -0.2, -4.6667, -10, -0.2, -5, -10, 0.2, -5, -10, -0.2, -5, -4, 0.2, -5, -4, 0.2, -5, -10, -0.2, -5, -4, -0.2, -5, -4, 0.2, 4.6667, -4, -0.2, 4.6667, -4, 0.2, 5, -4, 0.2, 5, -4, -0.2, 4.6667, -4, -0.2, 5, -4, 0.2, 5, -4, -0.2, 5, -10, 0.2, 5, -10, 0.2, 5, -4, -0.2, 5, -10, -0.2, 5, -4, -0.2, 4.6667, -10, -0.2, 4.6667, -4, -0.2, 5, -4, -0.2, 5, -10, -0.2, 4.6667, -10, -0.2, 5, -4, 0.2, 5, -10, 0.2, 5, -4, 2, 5, -4, 2, 5, -10, 0.2, 5, -10, 2, 5, -10, 0.2, -4.6667, -10, 0.2, -5, -10, 2, -4.6667, -10, 2, -4.6667, -10, 0.2, -5, -10, 2, -5, -10, 0.2, -4.6667, -4, 0.2, -4.6667, -10, 0.2, 4.6667, -10, 0.2, 4.6667, -4, 0.2, -4.6667, -4, 0.2, 4.6667, -4, -0.2, -5, -10, -0.2, -5, -4, -0.2, -4.6667, -4, -0.2, -4.6667, -10, -0.2, -5, -10, -0.2, -4.6667, -4, -0.2, -4.6667, -10, -0.2, -4.6667, -4, -0.2, 4.6667, -4, -0.2, 4.6667, -10, -0.2, -4.6667, -10, -0.2, 4.6667, -4, 0.2, -5, -4, -0.2, -5, -4, 0.2, -4.6667, -4, 0.2, -4.6667, -4, -0.2, -5, -4, -0.2, -4.6667, -4, 0.2, -4.6667, -4, -0.2, -4.6667, -4, 0.2, 4.6667, -4, 0.2, 4.6667, -4, -0.2, -4.6667, -4, -0.2, 4.6667, -10, 0.2, 5, -10, -0.2, 5, -10, 0.2, 4.6667, -10, 0.2, 4.6667, -10, -0.2, 5, -10, -0.2, 4.6667, -10, 0.2, 4.6667, -10, -0.2, 4.6667, -10, 0.2, -4.6667, -10, 0.2, -4.6667, -10, -0.2, 4.6667, -10, -0.2, -4.6667, -10, 2, 4.6667, -4, 2, 4.6667, -10, 2, 5, -10, 2, 5, -4, 2, 4.6667, -4, 2, 5, -10, 0.2, 5, -10, 0.2, 4.6667, -10, 2, 5, -10, 2, 5, -10, 0.2, 4.6667, -10, 2, 4.6667, -10, 0.2, 4.6667, -4, 0.2, 4.6667, -10, 2, 4.6667, -10, 2, 4.6667, -4, 0.2, 4.6667, -4, 2, 4.6667, -4, 0.2, 4.6667, -4, 0.2, 5, -4, 2, 4.6667, -4, 2, 4.6667, -4, 0.2, 5, -4, 2, 5, -10, 2, -5, -4, 2, -5, -10, 2, -4.6667, -10, 2, -4.6667, -4, 2, -5, -4, 2, -4.6667, -4, 0.2, -4.6667, -10, 0.2, -4.6667, -4, 2, -4.6667, -4, 2, -4.6667, -10, 0.2, -4.6667, -10, 2, -4.6667, -4, 0.2, -5, -4, 0.2, -4.6667, -4, 2, -5, -4, 2, -5, -4, 0.2, -4.6667, -4, 2, -4.6667, -10, 0.2, -5, -4, 0.2, -5, -10, 2, -5, -10, 2, -5, -4, 0.2, -5, -4, 2, -5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ptrbt"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7afcm"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_86ops"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_002xe"]
+albedo_color = Color(0.0627451, 0.458824, 0.172549, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rb7bt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e4r5v"]
+albedo_color = Color(0.054902, 0.0352941, 0.8, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tjgqo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h10jn"]
+albedo_color = Color(0.588235, 0.294118, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_c452l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxgyn"]
+albedo_color = Color(0.0901961, 0.239216, 0.027451, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_qce0a")
@@ -17,8 +39,49 @@ script = ExtResource("1_qce0a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_djxlb")
 
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.993, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_djxlb")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(2.93175, 0, 0, 0, 1, 0, 0, 0, 5.04118, 0.0247416, 0.0892491, 0.034827)
 mesh = SubResource("PlaneMesh_ptrbt")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("2_xcrdb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.93175, 0, 0, 0, 1, 0, 0, 0, 5.04118, 5.78657, 0.0892491, 0.034827)
+mesh = SubResource("PlaneMesh_7afcm")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_xcrdb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.1788, 0, 0, 0, 1, 0, 0, 0, 72.1908, 0.801302, 0, 0)
+mesh = SubResource("PlaneMesh_86ops")
+surface_material_override/0 = SubResource("StandardMaterial3D_002xe")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.3054, 0, 0, 0, 0.0176791, 0, 0, 0, 4.53929, 3.02303, -2.38419e-07, -9.44168)
+mesh = SubResource("CylinderMesh_rb7bt")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_e4r5v")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 0, 1.47012, -6.67715)
+mesh = SubResource("CylinderMesh_tjgqo")
+surface_material_override/0 = SubResource("StandardMaterial3D_h10jn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D4"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_c452l")
+surface_material_override/0 = SubResource("StandardMaterial3D_vxgyn")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 5.65628, -0.0794296, -8.06317)
+mesh = SubResource("CylinderMesh_tjgqo")
+surface_material_override/0 = SubResource("StandardMaterial3D_h10jn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D5"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, -1.09029)
+mesh = SubResource("SphereMesh_c452l")
+surface_material_override/0 = SubResource("StandardMaterial3D_vxgyn")

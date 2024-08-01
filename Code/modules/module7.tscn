@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c86uspsro2iv4"]
+[gd_scene load_steps=12 format=3 uid="uid://c86uspsro2iv4"]
 
 [ext_resource type="Script" path="res://modules/module.gd" id="1_wam5m"]
 [ext_resource type="Material" uid="uid://b84cwv5kxjjqs" path="res://Art/materials/grey.tres" id="3_6w7jk"]
@@ -7,6 +7,23 @@
 data = PackedVector3Array(-10, 0.2, -4.6667, -10, -0.2, -4.6667, -10, 0.2, -5, -10, 0.2, -5, -10, -0.2, -4.6667, -10, -0.2, -5, -10, 0.2, -5, -10, -0.2, -5, -4, 0.2, -5, -4, 0.2, -5, -10, -0.2, -5, -4, -0.2, -5, -4, 0.2, 4.6667, -4, -0.2, 4.6667, -4, 0.2, 5, -4, 0.2, 5, -4, -0.2, 4.6667, -4, -0.2, 5, -4, 0.2, 5, -4, -0.2, 5, -10, 0.2, 5, -10, 0.2, 5, -4, -0.2, 5, -10, -0.2, 5, -4, -0.2, 4.6667, -10, -0.2, 4.6667, -4, -0.2, 5, -4, -0.2, 5, -10, -0.2, 4.6667, -10, -0.2, 5, -4, 0.2, 5, -10, 0.2, 5, -4, 2, 5, -4, 2, 5, -10, 0.2, 5, -10, 2, 5, -10, 0.2, -4.6667, -10, 0.2, -5, -10, 2, -4.6667, -10, 2, -4.6667, -10, 0.2, -5, -10, 2, -5, -10, 0.2, -4.6667, -4, 0.2, -4.6667, -10, 0.2, 4.6667, -10, 0.2, 4.6667, -4, 0.2, -4.6667, -4, 0.2, 4.6667, -4, -0.2, -5, -10, -0.2, -5, -4, -0.2, -4.6667, -4, -0.2, -4.6667, -10, -0.2, -5, -10, -0.2, -4.6667, -4, -0.2, -4.6667, -10, -0.2, -4.6667, -4, -0.2, 4.6667, -4, -0.2, 4.6667, -10, -0.2, -4.6667, -10, -0.2, 4.6667, -4, 0.2, -5, -4, -0.2, -5, -4, 0.2, -4.6667, -4, 0.2, -4.6667, -4, -0.2, -5, -4, -0.2, -4.6667, -4, 0.2, -4.6667, -4, -0.2, -4.6667, -4, 0.2, 4.6667, -4, 0.2, 4.6667, -4, -0.2, -4.6667, -4, -0.2, 4.6667, -10, 0.2, 5, -10, -0.2, 5, -10, 0.2, 4.6667, -10, 0.2, 4.6667, -10, -0.2, 5, -10, -0.2, 4.6667, -10, 0.2, 4.6667, -10, -0.2, 4.6667, -10, 0.2, -4.6667, -10, 0.2, -4.6667, -10, -0.2, 4.6667, -10, -0.2, -4.6667, -10, 2, 4.6667, -4, 2, 4.6667, -10, 2, 5, -10, 2, 5, -4, 2, 4.6667, -4, 2, 5, -10, 0.2, 5, -10, 0.2, 4.6667, -10, 2, 5, -10, 2, 5, -10, 0.2, 4.6667, -10, 2, 4.6667, -10, 0.2, 4.6667, -4, 0.2, 4.6667, -10, 2, 4.6667, -10, 2, 4.6667, -4, 0.2, 4.6667, -4, 2, 4.6667, -4, 0.2, 4.6667, -4, 0.2, 5, -4, 2, 4.6667, -4, 2, 4.6667, -4, 0.2, 5, -4, 2, 5, -10, 2, -5, -4, 2, -5, -10, 2, -4.6667, -10, 2, -4.6667, -4, 2, -5, -4, 2, -4.6667, -4, 0.2, -4.6667, -10, 0.2, -4.6667, -4, 2, -4.6667, -4, 2, -4.6667, -10, 0.2, -4.6667, -10, 2, -4.6667, -4, 0.2, -5, -4, 0.2, -4.6667, -4, 2, -5, -4, 2, -5, -4, 0.2, -4.6667, -4, 2, -4.6667, -10, 0.2, -5, -4, 0.2, -5, -10, 2, -5, -10, 2, -5, -4, 0.2, -5, -4, 2, -5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p4f6u"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ccn6i"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tcqde"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfktn"]
+albedo_color = Color(0.0627451, 0.458824, 0.172549, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bfyjx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqh1j"]
+albedo_color = Color(0.588235, 0.294118, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qodr6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4x0v"]
+albedo_color = Color(0.0901961, 0.239216, 0.027451, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_wam5m")
@@ -17,8 +34,63 @@ script = ExtResource("1_wam5m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_djxlb")
 
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9427, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_djxlb")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(2.93175, 0, 0, 0, 1, 0, 0, 0, 5.04118, 0.0247416, 0.0892491, 0.034827)
 mesh = SubResource("PlaneMesh_p4f6u")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_6w7jk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.93175, 0, 0, 0, 1, 0, 0, 0, 5.04118, 5.75252, 0.0892491, 0.034827)
+mesh = SubResource("PlaneMesh_ccn6i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("3_6w7jk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.1788, 0, 0, 0, 1, 0, 0, 0, 72.1908, 0.801302, 0, 0)
+mesh = SubResource("PlaneMesh_tcqde")
+surface_material_override/0 = SubResource("StandardMaterial3D_pfktn")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, -0.210336, 0.932333, -8.06317)
+mesh = SubResource("CylinderMesh_bfyjx")
+surface_material_override/0 = SubResource("StandardMaterial3D_cqh1j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D3"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_qodr6")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4x0v")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 5.77453, 0.932333, -8.06317)
+mesh = SubResource("CylinderMesh_bfyjx")
+surface_material_override/0 = SubResource("StandardMaterial3D_cqh1j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D5"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_qodr6")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4x0v")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, -0.601569, 0.932333, 7.07025)
+mesh = SubResource("CylinderMesh_bfyjx")
+surface_material_override/0 = SubResource("StandardMaterial3D_cqh1j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D6"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_qodr6")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4x0v")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.450731, 0, 0, 0, 3.32745, 0, 0, 0, 0.450731, 4.64332, 0.932333, 7.65585)
+mesh = SubResource("CylinderMesh_bfyjx")
+surface_material_override/0 = SubResource("StandardMaterial3D_cqh1j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D8"]
+transform = Transform3D(7.25458, 0, 0, 0, -0.840254, 0, 0, 0, 7.25458, 0, 0.896852, 0)
+mesh = SubResource("SphereMesh_qodr6")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4x0v")
