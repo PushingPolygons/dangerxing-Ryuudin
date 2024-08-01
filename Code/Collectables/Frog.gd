@@ -3,6 +3,7 @@ extends Node3D
 @export var points: int = 1
 
 @export var move_speed: float = 10.0
+
 @onready var frog_sensor = $FrogSensor
 @onready var frog_sensor_side = $FrogSensorSide
 @onready var frog_sensor_side2 = $FrogSensorSide2
@@ -13,6 +14,7 @@ extends Node3D
 func _ready():
 	frog_sensor.enabled = true
 	print("Ready function called")
+	collect_sound.volume_db = 5
 
 
 func collect():
@@ -37,6 +39,14 @@ func _process(delta):
 
 
 func collection_noise():
-		collect_sound.play()
-
+	if collect_sound and collect_sound .is_inside_tree():
+		if collect_sound .stream:
+			print("Playing sound")
+			print("Sound stream before play: ", collect_sound.stream)
+			collect_sound.play()
+			print("Is playing after play() call: ", collect_sound.is_playing())
+		else:
+			print("Audio stream is not set or invalid")
+	else:
+		print("Sound player is not available or has been freed.")
 

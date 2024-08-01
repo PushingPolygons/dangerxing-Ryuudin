@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl45pb5qupx38"
+path="res://.godot/imported/Frog Collect Wav.wav-5613d59beb48e58924852f1068481e27.sample"
+
+[deps]
+
+source_file="res://Sounds/Frog Collect Wav.wav"
+dest_files=["res://.godot/imported/Frog Collect Wav.wav-5613d59beb48e58924852f1068481e27.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
